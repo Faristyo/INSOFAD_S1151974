@@ -17,7 +17,7 @@
         <li class="nav-item" *ngIf="(authService.$userIsLoggedIn|async)===false"><a class="nav-link" [routerLinkActive]="['active']" routerLink="/auth/register">Register</a>
         </li>
         <li class="nav-item" *ngIf="(!tokenService.isAdmin()) || !(authService.$userIsLoggedIn|async) ">
-          <a class="nav-link" [routerLinkActive]="['active']" routerLink="/products">Products</a>
+            <a class="nav-link" [routerLinkActive]="['active']" data-cy="products-btn" routerLink="/products">Products</a>
         </li>
         <li class="nav-item" *ngIf="(!tokenService.isAdmin()) || !(authService.$userIsLoggedIn|async) ">
           <a class="nav-link" [routerLinkActive]="['active']" data-cy="cart-link" routerLink="/cart">Cart ({{ amountOfProducts }})</a>
