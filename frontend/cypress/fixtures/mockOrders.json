@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "customerName": "John Doe",
+    "product": "Product A",
+    "quantity": 2,
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "customerName": "Jane Smith",
+    "product": "Product B",
+    "quantity": 1,
+    "status": "Shipped"
+  },
+  {
+    "id": 3,
+    "customerName": "Alice Johnson",
+    "product": "Product C",
+    "quantity": 3,
+    "status": "Delivered"
+  }
+]

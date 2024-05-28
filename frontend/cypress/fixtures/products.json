@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Leather Satchel Bag",
+    "description": "Handcrafted from the finest leather.",
+    "price": 950.0
+  },
+  {
+    "id": 2,
+    "name": "Exotic Skin Clutch Bag",
+    "description": "Made from exotic animal skin.",
+    "price": 1100.0
+  }
+]

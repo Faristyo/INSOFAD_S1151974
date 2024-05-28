@@ -1,0 +1,127 @@
+<h2>Order history</h2>
+<h5>You have 30 days to request a return.</h5>
+
+<div *ngFor="let orderGroup of orderGroups; let i = index" class="order-group mt-5">
+  <h5>Order Number: {{ i+1 }}</h5>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>Product name</th>
+          <th>Order date</th>
+          <th>Count</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orderGroup.products">
+          <td>{{ order.product.name }}</td>
+          <td>{{ order.createdAt | date }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>
+            {{ order.product.price * order.quantity | currency : "EUR" }}
+          </td>
+          <td>
+            <button
+              data-cy="return-product"
+              class="btn btn-primary"
+              *ngIf="order.productStatus === 1"
+              (click)="openModal(order, orderGroup.order_products_ids)"
+            >
+              Return
+            </button>
+            <span *ngIf="order.productStatus === 2"
+              >Waiting for approval</span
+            >
+            <span *ngIf="order.productStatus === 3">Succesfully returned {{ order.product.name }}. You have been refunded {{ order.product.price * order.quantity | currency : "EUR" }}. We hope to see you again!  </span>
+            <span *ngIf="order.productStatus === 4"
+              >Return was declined. For more information please contact us.</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Order history table and modal structure remain the same -->
+
+<!-- Order history table and modal structure remain the same -->
+
+<div
+        class="modal fade"
+        #returnBookModal
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="returnBookModalLabel"
+        aria-hidden="true"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="returnBookModalLabel">Return Book</h5>
+                <button
+                        type="button"
+                        class="close"
+                        (click)="closeModal()"
+                        aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form (submit)="submitReturn($event)">
+                    <!-- Radio buttons for reasons for returning books -->
+                    <div class="form-group" *ngIf="selecedOrder?.productStatus === 1">
+                        <label>Reasons for Return:</label>
+                        <div class="form-check" *ngFor="let reason of returnReasons">
+                            <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    id="reason_{{ reason }}"
+                                    name="returnReason"
+                                    [(ngModel)]="returnReason"
+                                    [value]="reason"
+                            />
+                            <label class="form-check-label" for="reason_{{ reason }}">{{
+                                    reason
+                                }}</label>
+                        </div>
+                    </div>
+
+                    <!-- Textbox for each reason -->
+                    <div class="form-group" *ngFor="let reason of returnReasons">
+                        <div *ngIf="returnReason == reason">
+                            <label>{{ reason }} Reason:</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    [(ngModel)]="customReasons[reason]"
+                                    [name]="'customReason_' + reason"
+                                    required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="returnQuantity">Quantity to Return:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-outline-secondary" (click)="decrementQuantity()">-</button>
+                            </div>
+                            <input type="number" class="form-control" id="returnQuantity" [(ngModel)]="returnQuantity" name="returnQuantity" min="1" [max]="selecedOrder?.quantity">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-secondary" (click)="incrementQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

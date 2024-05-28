@@ -1,0 +1,50 @@
+<div class="container mt-3">
+    <input type="text" class="form-control mb-3" data-cy="search-order" placeholder="Search by Order ID" [(ngModel)]="searchOrderId">
+
+    <!-- Order history -->
+    <div *ngFor="let orderGroup of orderGroups" class="order-group mt-5">
+        <!-- Check if the searchOrderId matches the current order group's ID -->
+        <ng-container *ngIf="!searchOrderId || orderGroup[0][0].orderId == searchOrderId">
+            <h5>Order Number: {{ orderGroup[0][0].orderId }}</h5>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Table headers -->
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Product name</th>
+                        <th>Order date</th>
+                        <th>Count</th>
+                        <th>Price</th>
+                        <th>Reason</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Table rows -->
+                    <ng-container *ngFor="let order of orderGroup">
+                        <tr>
+                            <!-- Display order details -->
+                            <td>{{ order[1].product.name }}</td>
+                            <td>{{ order[0].orderDate | date }}</td>
+                            <td>{{ order[1].quantity }}</td>
+                            <td>{{ order[1].product.price * order[1].quantity | currency:'EUR' }}</td>
+                            <td>{{ order[1].description }}</td>
+                            <td>
+                                <!-- Show different content based on product status -->
+                                <ng-container *ngIf="order[1].productStatus === 1">Order completed successfully</ng-container>
+                                <ng-container *ngIf="order[1].productStatus === 2">
+                                    <button class="btn btn-primary button-spacing" (click)="request(order, 'approve')" data-cy="good-condition-btn">Good Condition</button>
+                                    <button class="btn btn-danger" (click)="request(order,'reject')">Bad Condition</button>
+                                </ng-container>
+                                <ng-container *ngIf="order[1].productStatus === 3">successfully returned {{ order[1].product.name }}. Stock has been updated by {{ order[1].quantity }}  </ng-container>
+                                <ng-container *ngIf="order[1].productStatus === 4">Denied Return for {{ order[1].product.name }}</ng-container>
+                            </td>
+                        </tr>
+                    </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </ng-container>
+    </div>
+</div>

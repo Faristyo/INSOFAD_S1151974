@@ -1,0 +1,14 @@
+{
+    "orderId": 1,
+    "totalPrice": 754,
+    "status": "completed",
+    "customUser": {
+        "id": 1,
+        "firstname": null,
+        "lastname": null,
+        "email": null,
+        "password": null,
+        "role": null
+    },
+    "orderDate": "2024-05-28"
+}

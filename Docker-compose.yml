@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  postgresdb:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: luxuryproductsbob
+    ports:
+      - 5432:5432
+
+  luxuryproducts-backend:
+    build: ./insofad_backend
+    container_name: luxuryproducts-backend
+    environment:
+      SPRING_APPLICATION_JSON: '{
+      "spring.datasource.url"  : "jdbc:postgresql://postgresdb:5432/luxuryproductsbob",
+      "spring.datasource.username" : "postgres",
+      "spring.datasource.password" : "postgres",
+      "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.PostgreSQLDialect",
+      "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgresdb
+
+  luxuryproducts-frontend:
+    container_name: luxuryproducts-frontend
+    build:
+      context: ./INSOFAD_frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+
+  redis:
+    image: "redis:alpine"
+
+volumes:
+  postgres-data:

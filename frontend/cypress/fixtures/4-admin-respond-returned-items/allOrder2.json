@@ -1,0 +1,302 @@
+[
+    [
+        {
+            "orderId": 2,
+            "totalPrice": 704,
+            "status": "completed",
+            "customUser": {
+                "id": 1,
+                "firstname": null,
+                "lastname": null,
+                "email": "bob@bobsluxuryenterprise.com",
+                "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                "role": "1"
+            },
+            "orderDate": "2024-05-28"
+        },
+        {
+            "id": 3,
+            "order": {
+                "orderId": 2,
+                "totalPrice": 704,
+                "status": "completed",
+                "customUser": {
+                    "id": 1,
+                    "firstname": null,
+                    "lastname": null,
+                    "email": "bob@bobsluxuryenterprise.com",
+                    "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                    "role": "1"
+                },
+                "orderDate": "2024-05-28"
+            },
+            "product": {
+                "name": "Italian Leather Pants",
+                "price": 700.0,
+                "description": "Tailored from premium Italian leather, these pants offer a perfect blend of luxury and durability, tailored for the fashion-forward.",
+                "durability": "A+",
+                "color": "Black",
+                "fitting": "Slim Fit",
+                "imageURL": "imageURL",
+                "size": "One-size",
+                "stock": 0,
+                "id": 3,
+                "finished": false
+            },
+            "quantity": 1,
+            "productStatus": 1,
+            "description": "request",
+            "createdAt": "2024-05-28"
+        }
+    ],
+    [
+        {
+            "orderId": 3,
+            "totalPrice": 654,
+            "status": "completed",
+            "customUser": {
+                "id": 1,
+                "firstname": null,
+                "lastname": null,
+                "email": "bob@bobsluxuryenterprise.com",
+                "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                "role": "1"
+            },
+            "orderDate": "2024-05-28"
+        },
+        {
+            "id": 4,
+            "order": {
+                "orderId": 3,
+                "totalPrice": 654,
+                "status": "completed",
+                "customUser": {
+                    "id": 1,
+                    "firstname": null,
+                    "lastname": null,
+                    "email": "bob@bobsluxuryenterprise.com",
+                    "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                    "role": "1"
+                },
+                "orderDate": "2024-05-28"
+            },
+            "product": {
+                "name": "Suede Cargo Pants",
+                "price": 650.0,
+                "description": "Elevate your style with these soft suede cargo pants, offering both comfort and a bold fashion statement.",
+                "durability": "A+",
+                "color": "Sand",
+                "fitting": "Relaxed Fit",
+                "imageURL": "imageURL",
+                "size": "One-size",
+                "stock": 2,
+                "id": 4,
+                "finished": false
+            },
+            "quantity": 1,
+            "productStatus": 1,
+            "description": "request",
+            "createdAt": "2024-05-28"
+        }
+    ],
+    [
+        {
+            "orderId": 4,
+            "totalPrice": 2054,
+            "status": "completed",
+            "customUser": {
+                "id": 1,
+                "firstname": null,
+                "lastname": null,
+                "email": "bob@bobsluxuryenterprise.com",
+                "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                "role": "1"
+            },
+            "orderDate": "2024-05-28"
+        },
+        {
+            "id": 5,
+            "order": {
+                "orderId": 4,
+                "totalPrice": 2054,
+                "status": "completed",
+                "customUser": {
+                    "id": 1,
+                    "firstname": null,
+                    "lastname": null,
+                    "email": "bob@bobsluxuryenterprise.com",
+                    "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                    "role": "1"
+                },
+                "orderDate": "2024-05-28"
+            },
+            "product": {
+                "name": "Leather Satchel Bag",
+                "price": 950.0,
+                "description": "Handcrafted from the finest leather, this satchel is a masterpiece of luxury accessories, perfect for the discerning individual.",
+                "durability": "A+",
+                "color": "Tan",
+                "fitting": "30cm x 35cm",
+                "imageURL": "imageURL",
+                "size": "One-size",
+                "stock": 0,
+                "id": 5,
+                "finished": false
+            },
+            "quantity": 1,
+            "productStatus": 1,
+            "description": "request",
+            "createdAt": "2024-05-28"
+        }
+    ],
+    [
+        {
+            "orderId": 4,
+            "totalPrice": 2054,
+            "status": "completed",
+            "customUser": {
+                "id": 1,
+                "firstname": null,
+                "lastname": null,
+                "email": "bob@bobsluxuryenterprise.com",
+                "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                "role": "1"
+            },
+            "orderDate": "2024-05-28"
+        },
+        {
+            "id": 6,
+            "order": {
+                "orderId": 4,
+                "totalPrice": 2054,
+                "status": "completed",
+                "customUser": {
+                    "id": 1,
+                    "firstname": null,
+                    "lastname": null,
+                    "email": "bob@bobsluxuryenterprise.com",
+                    "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                    "role": "1"
+                },
+                "orderDate": "2024-05-28"
+            },
+            "product": {
+                "name": "Exotic Skin Clutch Bag",
+                "price": 1100.0,
+                "description": "This clutch made from exotic animal skin stands out as a symbol of luxury and exclusivity, perfect for high-class events.",
+                "durability": "A+",
+                "color": "Oxblood",
+                "fitting": "25cm x 15cm",
+                "imageURL": "imageURL",
+                "size": "One-size",
+                "stock": 0,
+                "id": 6,
+                "finished": false
+            },
+            "quantity": 1,
+            "productStatus": 1,
+            "description": "request",
+            "createdAt": "2024-05-28"
+        }
+    ],
+    [
+        {
+            "orderId": 1,
+            "totalPrice": 754,
+            "status": "completed",
+            "customUser": {
+                "id": 1,
+                "firstname": null,
+                "lastname": null,
+                "email": "bob@bobsluxuryenterprise.com",
+                "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                "role": "1"
+            },
+            "orderDate": "2024-05-28"
+        },
+        {
+            "id": 2,
+            "order": {
+                "orderId": 1,
+                "totalPrice": 754,
+                "status": "completed",
+                "customUser": {
+                    "id": 1,
+                    "firstname": null,
+                    "lastname": null,
+                    "email": "bob@bobsluxuryenterprise.com",
+                    "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                    "role": "1"
+                },
+                "orderDate": "2024-05-28"
+            },
+            "product": {
+                "name": "Silk Hoodie",
+                "price": 350.0,
+                "description": "Experience the smooth touch of pure silk with this hoodie, combining casual design with luxury fabric for a sophisticated, relaxed look.",
+                "durability": "A++",
+                "color": "Blue",
+                "fitting": "Tailored Fit",
+                "imageURL": "imageURL",
+                "size": "One-size",
+                "stock": 6,
+                "id": 2,
+                "finished": false
+            },
+            "quantity": 1,
+            "productStatus": 1,
+            "description": "Duplicate order + mm",
+            "createdAt": "2024-05-28"
+        }
+    ],
+    [
+        {
+            "orderId": 1,
+            "totalPrice": 754,
+            "status": "completed",
+            "customUser": {
+                "id": 1,
+                "firstname": null,
+                "lastname": null,
+                "email": "bob@bobsluxuryenterprise.com",
+                "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                "role": "1"
+            },
+            "orderDate": "2024-05-28"
+        },
+        {
+            "id": 1,
+            "order": {
+                "orderId": 1,
+                "totalPrice": 754,
+                "status": "completed",
+                "customUser": {
+                    "id": 1,
+                    "firstname": null,
+                    "lastname": null,
+                    "email": "bob@bobsluxuryenterprise.com",
+                    "password": "$2a$10$vDdGPu.HDI7nI78SowwvB.j8LQP3VIjeAXppQzDYj7m.wlvCPEzm.",
+                    "role": "1"
+                },
+                "orderDate": "2024-05-28"
+            },
+            "product": {
+                "name": "Cashmere Hoodie",
+                "price": 400.0,
+                "description": "Crafted from 100% pure cashmere, this hoodie offers unparalleled softness and warmth, ideal for those who seek both comfort and luxury.",
+                "durability": "A+",
+                "color": "Black",
+                "fitting": "Tailored Fit",
+                "imageURL": "imageURL",
+                "size": "One-size",
+                "stock": 5,
+                "id": 1,
+                "finished": false
+            },
+            "quantity": 1,
+            "productStatus": 3,
+            "description": "Damaged + Your reason for return",
+            "createdAt": "2024-05-28"
+        }
+    ]
+]

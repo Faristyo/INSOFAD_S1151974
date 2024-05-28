@@ -1,0 +1,14 @@
+.modal.fade.show {
+    display: block; /* Makes the modal element visible */
+    opacity: 1; /* Makes the modal content visible */
+  }
+  
+
+  .modal-header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-group{
+    width: 140px !important;
+  }
